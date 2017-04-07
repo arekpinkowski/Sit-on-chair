@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Raleway";
+}
+/* Służę do budowania konstrukcji a nie żeby było ładnie, więc nie dodawajcie mi już stylów */
+.container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/*
+Header
+ */
+
+.header {
+  background-color: #000000;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+
+  width: 50%;
+  float: left;
+  padding: 15px 0;
+}
+
+.header h1 span {
+  color: #27c7ab;
+}
+
+.header nav {
+  width: 50%;
+  float: left;
+}
+
+.mainMenu {
+  list-style-type: none;
+  width: 100%;
+  text-align: right;
+}
+.mainMenu li {
+  display: inline-block;
+  position: relative;
+}
+
+.mainMenu li a {
+  display: block;
+  color: #ffffff;
+  padding: 15px 25px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.subMenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 20px);
+  background-color: black;
+  text-align: left;
+  z-index: 8;
+}
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 20px solid black;
+  top: -40px;
+  left: calc(50% - 20px);
+}
+
+.hasChildren a:focus + .subMenu {
+  display: block;
+}
+
+/**
+ * Slider
+ */
+#slider {
+  position: relative;
+  padding: 100px 0 50px 0;
+  background: linear-gradient(#fafafa, #d0cfd7);
+}
+#slider img {
+  float: left;
+  max-width: 50%;
+  height: auto;
+}
+#slider section {
+  float: right;
+  width: 50%;
+  padding:50px 0;
+}
+#slider h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+#slider h2 span {
+  color: #27c7ab;
+}
+#slider p {
+  font-size: 1.4rem;
+  padding: 40px 0;
+  text-align: center;
+  line-height: 2.1rem;
+}
+
+#slider a {
+  font-size: 2.4rem;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  border: none;
+  background-color: #27c7ab;
+  color: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#prev {
+  font-size: 7.8rem;
+  color: #27c7ab;
+  position: absolute;
+  left: 20px;
+  top: calc(50% - 40px);
+  border: none;
+  background-color: transparent;
+  background-image: none;
+
+}
+
+#next {
+  font-size: 7.8rem;
+  font-weight: 300;
+  color: #27c7ab;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 40px);
+  border: none;
+  background-color: transparent;
+  background-image: none;
+}
+#next:focus {
+  outline: 0;
+
+}
+
+/**
+ * Content
+ */
+#content article {
+  float: left;
+  height: 200px;
+  width: 33.3332%;
+  padding: 20px;
+
+}
+#content article:before, #content article:after  {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+article div {
+  min-height: 200px;
+  padding-top: 1px;
+}
+
+#content article h3 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  padding: 20px 0;
+  margin: 0;
+  background-color: rgba(255,255,255,.3);
+  margin-top: 40%;
+}
+
+#content article h3 span {
+  border-bottom: 5px solid #27c7ab;
+  padding-right: 20px;
+}
+
+article:first-child div {
+  background-image: url(../images/box1_img.jpg);
+  background-size: cover;
+}
+article:nth-child(2) div {
+  background-image: url(../images/box2_img.jpg);
+  background-size: cover;
+}
+
+#content article:nth-child(3) div h3 {
+  margin: 0;
+}
+#content article:nth-child(3) div {
+  border: 2px solid lightgray;
+
+  padding: 10px;
+}
+article p {
+  font-size: 1.4rem;
+}
+/* Cennik */
+
+#prices {
+  background-color: #d0cfd7;
+}
