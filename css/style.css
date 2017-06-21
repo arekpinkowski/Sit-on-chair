@@ -79,6 +79,19 @@ Header
   text-align: left;
   z-index: 8;
 }
+.lastSubMenu {
+    position: absolute;
+}
+.galery{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 20px);
+    background-color: black;
+    text-align: left;
+    z-index: 8;
+}
+
 .triangle {
   position: absolute;
   width: 0;
@@ -92,6 +105,9 @@ Header
 .hasChildren a:focus + .subMenu {
   display: block;
 }
+/*.visible {
+    display: inline-block;
+}*/
 
 /**
  * Slider
@@ -101,7 +117,7 @@ Header
   padding: 100px 0 50px 0;
   background: linear-gradient(#fafafa, #d0cfd7);
 }
-#slider img {
+.pict li {
   float: left;
   max-width: 50%;
   height: auto;
@@ -148,6 +164,7 @@ Header
   border: none;
   background-color: transparent;
   background-image: none;
+  text-decoration: none;
 
 }
 
@@ -161,15 +178,23 @@ Header
   border: none;
   background-color: transparent;
   background-image: none;
+  text-decoration: none;
 }
 #next:focus {
   outline: 0;
 
 }
 
-/**
- * Content
- */
+.pict li {
+    display: none;
+}
+
+.pict .visible {
+    display: inline-block;
+}
+
+/* Content */
+
 #content article {
   float: left;
   height: 200px;
@@ -186,6 +211,10 @@ Header
 article div {
   min-height: 200px;
   padding-top: 1px;
+}
+
+.picture {
+    position: relative;
 }
 
 #content article h3 {
@@ -222,7 +251,7 @@ article:nth-child(2) div {
 article p {
   font-size: 1.4rem;
 }
-/* Cennik */
+/* Pricing */
 
 #prices {
 	background-color: #f1f1f1;
@@ -408,7 +437,7 @@ article p {
 }
 
 
-/*Formularz*/
+/*Form*/
 
 #contact {
 	background-color: #fff;
@@ -436,7 +465,7 @@ article p {
 .left-form input, textarea {
 	border: 1px solid #27c7ab;
 	width: 90%;
-	line-height: 60px;
+	line-height: 40px;
 	margin-bottom: 20px;
 	font-size: 2rem;
 	padding: 5px 5px;
@@ -478,8 +507,8 @@ input[type="checkbox"] + label span {
 }
 
 input[type="checkbox"] + label i.tick {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	display: inline-block;
 	border: 1px solid #e0e0e0;
 }

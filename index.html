@@ -14,17 +14,26 @@
            <li class="hasChildren">
              <a href="#">O firmie</a>
              <ul class="subMenu">
-               <div class="triangle">
-
-               </div>
+               <div class="triangle"></div>
                <li><a href="#">Aktualności</a></li>
                <li><a href="#">Nasz telefon</a></li>
                <li><a href="#">Historia</a></li>
              </ul>
            </li>
 
-           <li><a href="#">Galeria</a></li>
-           <li><a href="#">Kontakt</a></li>
+           <li>
+               <a href="#">Galeria</a>
+           </li>
+
+           <li class="lastSubMenu">
+               <a href="#">Kontakt</a>
+               <div class="galery">
+                       <ul>
+                           <div class="triangle"></div>
+                           <li><a href="#">Email</a></li>
+                       </ul>
+               </div>
+           </li>
          </ul>
        </nav>
 
@@ -33,7 +42,13 @@
    </header>
    <section id="slider">
      <div class="container">
-       <img src="images/black_chair.png" alt="Chair" />
+
+       <!-- <img src="images/black_chair.png" alt="Chair" /> -->
+       <ul class="pict">
+              <li><img src="images/black_chair.png" /></li>
+              <li><img src="images/red_chair1.png" /></li>
+              <li><img src="images/box1_img1.jpg" /></li>
+      </ul>
 
        <section id="sliderText">
          <h2>Sit <span>on</span> our <span>chair</span></h2>
@@ -42,22 +57,23 @@
          </p>
          <a href="#" class="btn">Zobacz więcej</a>
 
+
        </section>
-       <button type="button" name="button" id="prev"><</button>
-       <button type="button" name="button" id="next">></button>
+       <a href="#" name="button" id="prev"><</a>
+       <a href="#" name="button" id="next">></a>
 
      </div>
 
    </section>
    <section id="content">
      <div class="container">
-       <article class="">
-         <div class="">
+       <article class="box">
+         <div class="picture">
            <h3><span>Title</span></h3>
          </div>
        </article>
-       <article class="">
-         <div class="">
+       <article class="box">
+         <div class="picture">
            <h3><span>Title 2</span></h3>
          </div>
        </article>
@@ -187,5 +203,6 @@
        </div>
    </footer>
 
+<script type="text/javascript" src='js/app.js'></script>
  </body>
 </html>
